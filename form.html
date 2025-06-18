@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            word-break: keep-all;
+        }
+        p {
+            margin: 0;
+        }
+
+        h3 {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        h3::after {
+            content: "*";
+            color: rgb(175, 5, 5);
+        }
+
+        .form-container {
+            width: 1000px;
+            margin: 0 auto;
+            padding: 0 40px;
+
+        }
+
+        .form-container h2 {
+            font-size: 40px;
+        }
+
+        .form-container p {
+            font-size: 14px;
+        }
+
+        .row {
+            text-align: left;
+            margin: 20px 0;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        input {
+            background: #f1efec;
+            border: none;
+            padding: 24px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+
+        .radio {
+            display: flex;
+
+        }
+
+        .radio-wrap {
+            display: flex;
+            margin-right: 40px;
+        }
+        
+input[type="radio"] {
+  display: none;
+}
+
+.radio-wrap {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 8px;
+  user-select: none;
+}
+
+.radio-wrap p {
+  margin: 0 0 0 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+.radio-wrap::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #666;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background: white;
+  transition: border-color 0.3s ease;
+}
+
+input[type="radio"]:checked + p::before {
+content: "";
+    position: relative;
+    left: -22px;
+    width: 10px;
+    height: 10px;
+    background: #73695a;
+    border-radius: 50%;
+    display: inline-block;
+    top: -1px;
+}
+
+        .form-text {
+            width: 100%;
+            min-height: 64px;
+        }
+
+        .input-name p::after {
+            content: "*";
+            color: rgb(175, 5, 5);
+        }
+
+        .input-content p::after {
+            content: "*";
+            color: rgb(175, 5, 5);
+        }
+
+        .input-content textarea {
+            width: 100%;
+            padding: 24px;
+            min-height: 240px;
+            resize: none;
+            background: #f1efec;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <div class="row title">
+            <h2>
+                contact
+            </h2>
+            <p>
+                제작의 의뢰, 상담, 견적 등, 부담없이 문의해 주십시오
+            </p>
+        </div>
+        <h3>
+            문의종류
+        </h3>
+<div class="row radio">
+  <label class="radio-wrap">
+    <input type="radio" name="requestType" />
+    <p>제작 의뢰</p>
+  </label>
+  <label class="radio-wrap">
+    <input type="radio" name="requestType" />
+    <p>견적·상담</p>
+  </label>
+  <label class="radio-wrap">
+    <input type="radio" name="requestType" />
+    <p>기타</p>
+  </label>
+</div>
+
+        <div class="row input-name">
+            <p>
+                이름
+            </p>
+            <input type="text" placeholder="이름" class="form-text">
+        </div>
+        <div class="row input-company">
+            <p>
+                회사명
+            </p>
+            <input type="text" placeholder="회사명" class="form-text">
+        </div>
+        <div class="row input-email">
+            <p>
+                이메일 주소
+            </p>
+            <input type="text" placeholder="이메일 주소" class="form-text">
+        </div>
+        <div class="row input-tel">
+            <p>
+                이메일 주소
+            </p>
+            <input type="tel" placeholder="전화번호" class="form-text">
+        </div>
+        <div class="row input-content">
+            <p>
+                문의내용
+            </p>
+            <textarea type="text" placeholder="문의 내용" class="form-textarea">
+            </textarea>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
